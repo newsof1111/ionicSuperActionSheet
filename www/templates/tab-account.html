@@ -1,0 +1,45 @@
+<ion-view view-title="shop Exemple">
+ <ion-nav-buttons side="right">
+  <button class="button button-clear" ng-click="openFavISAS()">
+    <i  style="color: #cebd66;" class=" icon left ion-heart  "></i>
+  </button>
+</ion-nav-buttons>
+  <ion-content>
+  
+<ion-list>
+      <ion-item class=" item-thumbnail-left item-button-right" ng-repeat="product in products" type="item-text-wrap" ng-click="" >
+        <img ng-src="{{product.picture}}">
+        <h2>{{product.name}}</h2>
+        <p>{{product.price}}</p>
+		<button class="button button-clear" ng-if="product.is_favorite==='false'" ng-click="switchFav(product)">
+			<i  style="color: #d6d6d6;" class=" icon left ion-ios-star-outline  "></i>
+		</button>
+		<button class="button button-clear" ng-if="product.is_favorite==='true'" ng-click="switchFav(product)">
+			<i  style="color: #cebd66;" class=" icon left ion-ios-star  "></i>
+		</button>
+      </ion-item> 
+	  </ion-list>
+	  
+	  
+  </ion-content>
+   <ion-super-action-sheet delegate-handle="sof2" >
+		<div  ng-if="favproducts.length===0">
+		  <div style="height:32vh;background-color:#e2e2e2;">
+		  <br>
+			<center>
+				<i class="ion-flash" style="font-size: -webkit-xxx-large;color: #b7b7b7;"> </i>
+				<h1 style="    color: #676767;font-size:12px;"> Empty Favorite products List</h1>
+			</center>
+		  </div>
+		</div>
+		<ion-list>
+			  <ion-item class=" item-thumbnail-left item-button-right" ng-repeat="favproduct in favproducts" type="item-text-wrap" >
+					<img ng-src="{{favproduct.picture}}">
+					<h2>{{favproduct.name}}</h2>
+					<p>{{favproduct.price}}</p>
+					
+			  </ion-item> 
+	  </ion-list>
+	  
+ </ion-super-action-sheet>
+</ion-view>

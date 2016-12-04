@@ -1,0 +1,136 @@
+@keyframes myChange {
+    from {
+        color: black;
+		
+    } to {
+        color: white;
+		
+    }
+}
+@keyframes backtwiped {
+    from {
+        height: 100vh;
+		
+
+		
+    } to {
+        height: 60vh;
+		
+    }
+}
+
+@keyframes backtwipedinvers {
+    from {
+        height: 60vh;opacity:0.1;
+		
+    } to {
+        height: 100vh;opacity:1;
+		
+    }
+}
+@keyframes paddingAnimaion {
+    from {
+        padding: 0%;background-color: black;
+    } to {
+        padding: 33%;background-color: #212020;
+    }
+}
+@keyframes skscrolltwipedinvers {
+    from {
+        background-color: rgba(0,0,0,  0.1);opacity:0.1;
+    } to {
+     background-color: rgba(0,0,0,  0.5); opacity:1;
+    }
+}
+.p{
+-webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.p1{
+margin:0px;
+padding:0px;
+	height: 50vh;
+	background-color:red;
+
+position:relative;
+top:0px;
+}
+.p1-active{
+	
+	
+background-color: red;
+top:42vh;
+}
+.p2{
+margin:0px;
+/*padding:0px;*/
+height: 50vh;
+color:white;
+background-color:black;
+position:relative;
+top:0px;
+}
+.p2-hidden{
+display:none;
+}
+.p2-active{
+top:50vh;
+ animation: 0.5s paddingAnimaion; padding: 33%;background-color: #212020;
+}
+.p3{
+margin:0px;
+padding:0px;
+  height: 50vh;
+    background-color:blue;position:relative;
+top:0px;
+}
+.p3-hidden{
+display:none;
+}
+.p3-active{
+
+top:60vh;}
+.nghide {
+
+    animation: 0.5s myChange;
+	color:white;
+}
+.skscroll.scroll-content.ionic-scroll.has-header.indexing
+{
+z-index:-20;
+}
+
+
+.skscroll.scroll-content.ionic-scroll.has-header .scroll .back
+{
+
+	height:80vh;
+	opacity:0.1;
+}
+.skscroll .scroll-bar.scroll-bar-v 
+{
+	display: none;
+}
+
+
+
+body{
+margin:0px;
+padding:0px;
+  
+}
+.skscroll .list .item
+{
+border-color: #ffffff;
+background-color: rgb(228, 224, 224);
+color: #1f67b3;
+    font-size: 13px;
+}
+.skscroll .list .item icon 
+{
+font-size: x-large;
+    color: #9a0b0b;
+}
+.skcontent
+{
+}

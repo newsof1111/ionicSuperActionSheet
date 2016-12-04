@@ -1,0 +1,80 @@
+<ion-view view-title="TOP MOVIES 2016">movies
+  <ion-content>
+  <ion-list>
+      <ion-item class=" item-thumbnail-left " ng-repeat="movie in movies"  ng-click="openFavISAS(movie)" >
+        <img ng-src="{{movie.picture}}">
+      <h2>{{movie.name}}</h2>
+      <p><span style="color: #3582b1;padding-right: 5px;" class="icon ion-android-time" ></span>{{movie.duration}}</p> 
+	  <p><span style="color: #106182;padding-right: 5px;font-family: -webkit-pictograph;" >Starts:</span>{{movie.Stars}}</p>
+      </ion-item> 
+   </ion-list>
+   
+  </ion-content>
+  
+  <ion-super-action-sheet delegate-handle="sof4" >
+		
+	<div class="list" style="background-color: #ffffff;">
+	<h3 style="color: #444 ;font-size: 17px;font-weight: 500;line-height: 44px;    text-transform: uppercase;text-align: center;"> {{selectedmovie.name}}</h3>
+		  <div class="list card" >
+            <div class="item item-divider" style="background-color: rgb(243, 243, 243);color: #656565;">
+                <i class="ion-videocamera"></i>
+                Trailer 
+            </div>
+            <div class="padding" id="popupVid">
+                          
+				<iframe id="iframe" src="{{trustSrc(selectedmovie.trailerURL)}}" frameborder="0" width="100%" height="150"></iframe>
+
+            </div>
+        </div>  
+		<div class="list card" >
+            <div class="item item-divider" style="background-color: rgb(243, 243, 243);color: #656565;">
+                <i class="ion-clipboard"></i>
+                Storylines
+            </div>
+            <div class="padding">
+                          
+				{{selectedmovie.description}}
+
+            </div>
+        </div> 
+		
+		<div class="list card" >
+            <div class="item item-divider" style="background-color: rgb(243, 243, 243);color: #656565;">
+                <i class="ion-speakerphone"></i>
+                Director 
+            </div>
+            <div class="padding">
+                          
+				{{selectedmovie.Director}}
+
+            </div>
+        </div> 
+		
+		<div class="list card" >
+            <div class="item item-divider" style="background-color: rgb(243, 243, 243);color: #656565;">
+                <i class="ion-edit"></i>
+                Writer 
+            </div>
+            <div class="padding">
+                          
+				{{selectedmovie.Writer}}
+
+            </div>
+        </div> 
+		
+		<div class="list card" >
+            <div class="item item-divider" style="background-color: rgb(243, 243, 243);color: #656565;">
+                <i class="ion-film-marker"></i>
+                Stars 
+            </div>
+            <div class="padding">
+                          
+				{{selectedmovie.Stars}}
+
+            </div>
+        </div> 
+		
+	</div>  
+	  
+ </ion-super-action-sheet>
+</ion-view>

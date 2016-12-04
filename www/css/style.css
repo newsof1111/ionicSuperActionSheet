@@ -1,0 +1,45 @@
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
+color: red !important;
+background-color: #e0dede;
+}
+
+fader {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  opacity: 0;
+  z-index: -1; }
+ion-content.has-wallet {
+  top: 96px !important; }
+ion-wallet-select {
+  position: relative;
+  display: block;
+  top: 44px;
+  height: calc(0% - 96px);
+  transition: all .5s;
+  z-index: 10; }
+ion-wallet-select.shown {
+  height: calc(100% - 96px); }
+ion-wallet-select.hidden {
+  height: calc(0% - 96px); }
+ion-wallet-select wallet-content {
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  background: #ccc; }
+ion-wallet-select wallet-content .item:first-child {
+  margin-top: 10px; }
+ion-wallet-select wallet-content .item:last-child {
+  margin-bottom: 64px; }
+.premium-bar {
+  transition: all .5s; }
+.premium-bar.shown {
+  opacity: 1; }
+.premium-bar.hidden {
+  opacity: 0; }
+.add-wallet {
+  background: #ccc !important;
+  bottom: -53px !important;
+  z-index: 1 !important; }

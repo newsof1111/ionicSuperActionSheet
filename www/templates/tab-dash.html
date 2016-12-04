@@ -1,0 +1,48 @@
+<ion-view view-title="Dashboard">
+  <ion-content  has-bouncing="false" >
+      
+
+
+<ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" ng-click="openskmenu(chat)" >
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-down icon-accessory"></i>
+
+        
+      </ion-item> 
+	  </ion-list>
+</ion-content>
+   <ion-super-action-sheet delegate-handle="sof1" >
+		<div class="list ">
+
+				  <a href="#" class="item item-icon-left">
+					<i class="icon ion-location"></i>
+					{{selectedChat.address}}
+				  </a>
+					<a href="#" class="item item-icon-left">
+					<i class="icon ion-social-twitter"></i>
+					{{selectedChat.twitter}}
+				  </a>
+
+				  <a href="#" class="item item-icon-left">
+					<i class="icon ion-social-facebook"></i>
+					{{selectedChat.facebook}}
+				  </a>
+
+				  <a href="#" class="item item-icon-left">
+					<i class="icon ion-social-googleplus"></i>
+					{{selectedChat.googleplus}}
+
+				  </a>
+
+				  <a href="#" class="item item-icon-left">
+					<i class="icon ion-social-github"></i>
+					{{selectedChat.github}}
+				  </a>
+
+			</div>
+ </ion-super-action-sheet>
+
+</ion-view>

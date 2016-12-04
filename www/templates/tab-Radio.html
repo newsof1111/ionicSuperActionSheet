@@ -1,0 +1,25 @@
+<ion-view view-title="Radio Button Exemple">
+ 
+  <ion-content>
+  <label class="item item-input item-select"  ng-click="openFavISAS()">
+    <div class="input-label">
+      <span style="color:#a7a7a7;">country:   </span> <span style="color:black;">{{data.selectedcountry}}</span>
+    </div>
+    
+  </label>
+
+  </ion-content>
+   <ion-super-action-sheet delegate-handle="sof3" >
+		<br>
+		<ion-list>
+			  <ion-radio  ng-repeat="country in countriesList"  ng-model="data.selectedcountry" ng-value="country.name" ng-click="closeFavISAS()" >
+					
+					<h2 style="font-size:11px;">{{country.name}} <span style="    background-color: #2a7fd4;color: #e5e8ea;padding-left: 5px;padding-right: 5px;border-radius: 7px;margin-left: 5px;font-family: fantasy;"> {{country.code}}</span></h2>
+					
+					
+			  </ion-radio> 
+	  </ion-list>
+		 
+	  
+ </ion-super-action-sheet>
+</ion-view>
