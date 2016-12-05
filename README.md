@@ -58,6 +58,9 @@ $scope.$on('closing', function ()
 ##3:you want to test ?
 
 pass this id 4ddac074 in ionic view
+[Youtube Link](https://www.youtube.com/watch?v=112rx7ZUm6o)<br>
+[ionic market Link](https://market.ionic.io/plugins/ionicactionsheet2)<br>
+![screenshot](s3.amazonaws.com/ionic-marketplace/ionicactionsheet2/screenshot_1.gif)<br>
 
 ##4:Need Custom Work? 
 
