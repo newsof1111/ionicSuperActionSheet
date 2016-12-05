@@ -1,3 +1,7 @@
+# Requirements
+
+AngularJS 1
+Ionic 1.3 +
 
 # 1:Introduction
 
