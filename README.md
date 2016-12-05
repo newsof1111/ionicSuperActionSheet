@@ -1,7 +1,7 @@
 # Requirements
 
-AngularJS 1
-Ionic 1.3 +
+AngularJS 1 <br>
+Ionic 1.3 + <br>
 
 # 1:Introduction
 
